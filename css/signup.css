@@ -1,0 +1,188 @@
+
+.names{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-between;
+	margin-top:25px;
+	/* border:1px solid red; */
+	height: 60px;
+	/* margin-bottom: 20px; */
+	
+}
+.names input{
+	width: 98%;
+}
+.form_body {
+	background-color: rgba(0, 0, 0);
+	border-radius: 10px;
+	box-sizing: border-box;
+	padding: 15px;
+	width: 500px;
+	height:700px;
+}
+#close{
+	width: 30px;
+}
+
+.title {
+	color: #eee;
+	font-family: sans-serif;
+	font-size: 30px;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+.subtitle {
+	color: #eee;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	margin-top: 10px;
+
+}
+
+.page_move_btn {
+	color: #eee;
+	font-size: 16px;
+	font-weight: 600;
+	margin-top: 40px;
+	text-align: center;
+	text-decoration: underline;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.input-container {
+	height: 50px;
+	position: relative;
+	width: 100%;
+}
+
+.ic1 {
+	margin-top: 25px;
+}
+
+.ic2 {
+	margin-top: 20px;
+	/* background-color: white; */
+}
+.ic3{
+	margin-top: 50px;
+	/* background-color: white; */
+
+}
+.ic4{
+	margin-top: 50px;
+	/* background-color: white; */
+
+}
+
+.input {
+	background-color: #303245;
+	border-radius: 12px;
+	border: 0;
+	box-sizing: border-box;
+	color: #eee;
+	font-size: 18px;
+	height: 50px;
+	outline: 0;
+	padding: 4px 20px 0;
+	width: 100%;
+	/* color: #65657b; */
+}
+
+
+.submit {
+	/* background-color: #08d; */
+	border-radius: 12px;
+	border: 0;
+	box-sizing: border-box;
+	color: #eee;
+	cursor: pointer;
+	font-size: 18px;
+	height: 50px;
+	/* margin-top: 38px; */
+	/* outline: 0; */
+	text-align: center;
+	width: 100%;
+}
+
+.submit:active {
+	background-color: #06b;
+}
+
+.showPassword {
+	color: rgb(212, 211, 211);
+	font-family: sans-serif;
+	font-size: 14px;
+	font-weight: 200;
+}
+
+/* Button hover CSS from https://codepen.io/vajkri/pen/zrRxmQ */
+.mainDiv {
+	overflow: hidden;
+	border-radius: 12px;
+	transform: translate(-00%, 13%);
+	color: rgb(222, 26, 26);
+}
+
+.mainDiv:nth-child(2) {
+	position: absolute;
+	top: 50%;
+	left: 58%;
+	transform: translate(-50%, -50%);
+}
+
+.mainDiv>button {
+	color: #fff;
+	background-color: #08d;
+	border-radius: 12px;
+	padding: 15px 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-size: 25px;
+	letter-spacing: 4px;
+	height: 60px;
+	/* overflow: hidden; */
+}
+
+/* .secondBTN{
+		background: #A82682;
+	} */
+.mainDiv>button:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 200px;
+	background: linear-gradient(to right, transparent 10%, rgba(255, 255, 255, 0.5) 50%, transparent);
+	transform: translate(-50%, -50%);
+	left: -150%;
+	transition: 0.6s;
+}
+
+.mainDiv>button:hover:before {
+	left: 150%;
+}
+
+@media only screen and (max-width: 1135px) {
+	.mainDiv:nth-child(2) {
+		top: 60%;
+		left: 50%;
+	}
+
+	.mainDiv:nth-child(1) {
+		top: 45%;
+		left: 50%;
+	}
+}
+
+#error_msg {
+	/* color: rgb(254, 46, 46); */
+	font-family: sans-serif;
+	font-size: 12px;
+	font-weight: 100;
+	margin: 0px;
+}

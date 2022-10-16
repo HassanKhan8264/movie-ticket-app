@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>booknow</title>
+	<link rel="stylesheet" href="./css/booking.css">
+	<link rel="shortcut icon" href="./favicon2.jpg" type="image/x-icon">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+
+	<!------ Include the above in your HEAD tag ---------->
+
+	<!--made by vipul mirajkar thevipulm.appspot.com-->
+
+
+	<header class="header">
+
+		<!-- Top Bar -->
+
+		<!-- Header Main -->
+
+		<div class="header_main">
+			<div class="container">
+				<div class="row">
+
+					<!-- Logo -->
+					<div class="col-lg-2 col-sm-3 col-3 order-1">
+						<div class="logo_container">
+							<img src="./images & icons/logo.png" alt="">
+						</div>
+					</div>
+
+					<!-- Search -->
+					<div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+						<div class="header_search">
+							<div class="header_search_content">
+								<div class="header_search_form_container">
+									<form action="#" class="header_search_form clearfix">
+										<input type="text" id="userinput" name="search" required="required"
+											class="header_search_input" placeholder="Enter Movies Name">
+										<button onclick="check()" type="button" class="header_search_button trans_300"
+											value="Submit"><img
+												src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918770/search.png"
+												alt=""></button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Wishlist -->
+					<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+							<div class="wishlist d-flex flex-row align-items-center justify-content-end">
+								<div class="wishlist_icon"></div>
+								<div class="wishlist_content">
+									<div class="wishlist_text" onclick="message()">Help</div>
+									<!-- <div class="wishlist_count">10</div> -->
+								</div>
+							</div>
+
+							<!-- Cart -->
+							<div class="cart">
+								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
+									<div class="cart_icon">
+
+										<!-- <div class="cart_count"><span>3</span></div> -->
+									</div>
+									<div class="cart_content">
+										<div class="cart_text" onclick="logout()">Log Out</div>
+										<!-- <div class="cart_price">$185</div> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- sign up modal -->
+		
+	</header>
+
+
+	<div class="ticket_cat">
+		<div class="bus">Bus</div>
+		<div class="bus">Flights</div>
+		<div class="bus">Hotels</div>
+		<div class="bus">Cargo</div>
+		<div class="bus">Cricket</div>
+		<div class="bus">Movies</div>
+		<div class="bus">Events</div>
+		<div class="bus">Tours</div>
+		<div class="bus">Car Rental</div>
+
+
+		<div id="msg" class="typewrite" data-period="2000"
+			data-type='[ "Bookme Bus tickect.", "Bookme a Car.", "Bookme Match ticket.", "Bookme Holidays.","Bookme an Event" ]'>
+			<span class="wrap"></span>
+		</div>
+	</div>
+
+	<!-- carosel -->
+	<div id="demo" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="https://www.wordexceltemplates.com/wp-content/uploads/2021/03/Cinema-ticket-3-CRC.png"
+					width="1100" height="500">
+			</div>
+			<div class="carousel-item">
+				<img src="./images & icons/caroselitem3.png" width="1100" height="500">
+			</div>
+			<div class="carousel-item">
+				<img src="./images & icons/caroselitem1.jpg" width="1100" height="500">
+			</div>
+			<div class="carousel-item">
+				<img src="./images & icons/caroselitem2.jpg" width="1100" height="500">
+			</div>
+			<div class="carousel-item">
+				<img src="./images & icons/caroselitem4.jpg" width="1100" height="500">
+			</div>
+			<!-- <div class="carousel-item">
+				<img src="./images & icons/poster6.jpg"  width="1100" height="500">
+			</div> -->
+			<a class="carousel-control-prev" href="#demo" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="#demo" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+	</div>
+	<!-- carosel -->
+
+	<!-- movies -->
+	<div class="center">
+		<h1>Now Showing</h1>
+		<div class="main">
+			<div class="searched_movie" id="searched_movie" onmouseover="check()">
+				<div id="moviename2"><a href="./homepage.html">Book it Now</a></div>
+				<button id="cancelbtn" onclick="cancel()">X</button>
+				<p id="para"></p>
+				<img src="" id="img" alt="">
+				<div id="else" class="else">
+					<!-- <img width="30px" height="30px" id="else" src="./images & icons/not.jpg" alt=""> -->
+				</div>
+			</div>
+			<!-- <a href="./homepage.html"></a> -->
+
+			<div class="left" id="left">
+				
+
+				<div class="movie" id="movie">
+					<img id="along" src="./images & icons/along the ride.jpg" alt="">
+					<div id="moviename"><a href="./along.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="ambulance" src="./images & icons/ambulance.jpg" alt="">
+					<div id="moviename"><a href="./ambulance.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="twin" src="./images & icons/the twin.jpg" alt="">
+					<div id="moviename"><a href="./twin.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="batman" src="./images & icons/movie6.jpg" alt="">
+					<div id="moviename"><a href="./batman.html">Book it Now</a></div>
+				</div>
+				
+				<div class="movie" id="movie">
+					<img id="breakingbad" src="./images & icons/breaking bad.jpg" alt="">
+					<div id="moviename"><a href="./breakingbad.html">Book it Now</a></div>
+				</div>
+
+
+				<div class="movie" id="movie">
+					<img id="365days" src="./images & icons/365days.jpg" alt="">
+					<div id="moviename"><a href="365days.html" >Book it Now</a></div>
+				</div>
+				
+				<!-- <h1>Upcoming movies</h1> -->
+				<div class="movie" id="movie">
+					<img id="spiderman" src="./images & icons/spiderman.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+				
+				<div class="movie" id="movie">
+					<img id="uncharted" src="./images & icons/img5.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+				<div class="movie" id="movie">
+					<img id="bluey" src="./images & icons/bluey.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+				
+				<div class="movie" id="movie">
+					<img id="ourfather" src="./images & icons/our father.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="ghost" src="./images & icons/ghost in the shell.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="lostcity" src="./images & icons/the lost city.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+				
+
+				<div class="movie" id="movie">
+					<img id="365days" src="./images & icons/365days.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="along" src="./images & icons/along the ride.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="ambulance" src="./images & icons/ambulance.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="twin" src="./images & icons/the twin.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="bluey" src="./images & icons/bluey.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="breakingbad" src="./images & icons/breaking bad.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="batman" src="./images & icons/movie6.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="spiderman" src="./images & icons/spiderman.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="uncharted" src="./images & icons/img5.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="ourfather" src="./images & icons/our father.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="ghost" src="./images & icons/ghost in the shell.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+				<div class="movie" id="movie">
+					<img id="lostcity" src="./images & icons/the lost city.jpg" alt="">
+					<div id="moviename"><a href="./homepage.html">Book it Now</a></div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footer">
+			<div class="services">
+				<h1>Services</h1>
+				<li>Bus Tickets</li>
+				<li>Flights Booking</li>
+				<li>Hotels Booking</li>
+				<li>Bus Tickets</li>
+				<li>Flights Booking</li>
+				<li>Hotels Booking</li>
+
+			</div>
+			<div class="topflights">
+				<h1>Top Flights</h1>
+				<li>Bus Tickets</li>
+				<li>Bus Tickets</li>
+				<li>Bus Tickets</li>
+				<li>Flights Booking</li>
+				<li>Flights Booking</li>
+				<li>Flights Booking</li>
+				<li>Hotels Booking</li>
+				<li>Hotels Booking</li>
+				<li>Bus Tickets</li>
+				<li>Bus Tickets</li>
+
+			</div>
+			<div class="follow">
+				<h1>Follow Us</h1>
+				<div class="links">
+					<div class="facebook"><i class="bi bi-facebook"></i></div>
+					<div class="twitter"><i class="bi bi-twitter"></i></div>
+					<div class="insta"><i class="bi bi-instagram"></i></div>
+					<div class="linkdin"><i class="bi bi-linkedin"></i></div>
+					<div class="youtube"><i class="bi bi-youtube"></i></div>
+				</div>
+				<div class="appstore"><i class="bi bi-google-play"></i><span>Google Play</span></div>
+				<div class="googleplay"><i class="bi bi-apple"></i><span>Apple Store</span></div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+<script src="./js/seat.js"></script>
+<script src="./js/booking.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

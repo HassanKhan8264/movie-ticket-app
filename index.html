@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>booknow</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/login.css">
+	<link rel="stylesheet" href="./css/signup.css">
+</head>
+<body>
+	
+	<div class="form_body_login">
+		<div class="title">LogIn</div>
+		<div class="subtitle">Welcome Back</div>
+		<div class="subtitle" id="inputError"></div>
+
+		<form onsubmit="form_valadtion(); return false">
+			<div class="input-container ic2">
+				<input class="input" type="eusername" id="userName" placeholder="User Name" name="email" required />
+			</div>
+
+			<div class="input-container ic2">
+				<input id="password" class="input" type="password" placeholder="password" name="password" required />
+			</div>
+			<input type="checkbox" onclick="show_password()"><span class="showPassword">Show Password</span>
+			<p id="error_msg"></p>
+			
+
+			<div class="mainDiv">
+				<button type="button" class="submit secondBTN" onclick="login()" onclick="validation()">SUBMIT </button>
+			</div>
+		</form>
+		<!-- <button onclick="move_page()" class="page_move_btn">Don't have an Account</button> -->
+	</div>
+</body>
+<script src="./js/seat.js"></script>
+</html>

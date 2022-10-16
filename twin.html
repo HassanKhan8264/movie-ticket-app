@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>booknow</title>
+    <link rel="stylesheet" href="m.css" />
+    <link rel="stylesheet" href="./css/movie1.css" />
+    <link rel="stylesheet" href="./css/seat.css" />
+    <link rel="stylesheet" href="./css/signup.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/booking.css" />
+    <link rel="shortcut icon" href="./favicon2.jpg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+  </head>
+
+  <body>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <!--made by vipul mirajkar thevipulm.appspot.com-->
+
+    <header class="header">
+      <!-- Top Bar -->
+
+      <!-- Header Main -->
+
+      <div class="header_main">
+        <div class="container">
+          <div class="row">
+            <!-- Logo -->
+            <div class="col-lg-2 col-sm-3 col-3 order-1">
+              <div class="logo_container">
+                <img src="./images & icons/logo.png" alt="" />
+              </div>
+            </div>
+
+            <!-- Search -->
+            <div
+              class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right"
+            >
+              <div class="header_search" id="searchinput">
+                <div class="header_search_content">
+                  <div class="header_search_form_container">
+                    <form action="#" class="header_search_form clearfix">
+                      <input
+                        type="text"
+                        id="userinput"
+                        name="search"
+                        required="required"
+                        class="header_search_input"
+                        placeholder="Enter Movies Name"
+                      />
+                      <button
+                        onclick="check()"
+                        type="button"
+                        class="header_search_button trans_300"
+                        value="Submit"
+                      >
+                        <img
+                          src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918770/search.png"
+                          alt=""
+                        />
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Wishlist -->
+            <div
+              class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right"
+            >
+              <div
+                class="wishlist_cart d-flex flex-row align-items-center justify-content-end"
+              >
+                <div
+                  class="wishlist d-flex flex-row align-items-center justify-content-end"
+                >
+                  <div class="wishlist_icon"></div>
+                  <div class="wishlist_content">
+                    <div class="wishlist_text" onclick="logout()">Logout</div>
+                    <!-- <div class="wishlist_count">10</div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- sign up modal -->
+    </header>
+    <!-- <div class="seat_portion">
+
+		<h1>Book Seat Here</h1>
+		<h5>You can only book one seat At A Time</h5>
+		<div class="seat_center">
+		<div class="seat_main">
+			<div id="a1" class="a1" >A1
+				<button id="btna1" onclick="reserved(this.id)">book now</button>
+				</div>
+
+			<div id="a2" class="a2" >A2
+				<button id="btna2" onclick="reserved(this.id)" >book now</button>
+			</div>
+
+			<div id="a3" class="a3"  >A3
+				<button id="btna3" onclick="reserved(this.id)">book now</button>
+			</div>
+
+			
+			
+		</div>
+		<div class="seat_right" id="details">
+			<button id="remove2" onclick="remove2()">cancel bokign for 2</button> -->
+    <!-- <button id="remove3" onclick="remove3()">cancel bokign for 3</button> -->
+    <!-- Seats Booking -->
+
+    <!-- Movie Screen -->
+
+    <!-- Movie Seats -->
+
+    <div class="movie_seats">
+      <div class="row_seat">
+        <div class="movie_price">
+          <h3>Ticket Price</h3>
+          <div class="price">
+            <div>Price Per ticket : $</div><div id="ticket_price">1000</div>
+          </div>
+          <div class="price">
+            <div>Subtotal : $</div><div id="total">0</div>
+          </div>
+         
+          <!-- <a href="#" class="btn">add to cart</a> -->
+        </div>
+        <div class="row">
+          <div class="seat" id="0" onClick="onSeat(this)">
+            <p>Sold</p>
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="1" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="2" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="3" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="4" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="5" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+        </div>
+
+        <!-- Movie Seats -->
+        <div class="row">
+          <div class="seat" id="6" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="7" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="8" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="9" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="10" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+            <div class="seat" id="11" onClick="onSeat(this)" >
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+        </div>
+
+        <!-- Movie Seats -->
+        <div class="row">
+          <div class="seat" id="12" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="13" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="14" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="15" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="16" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="17" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+        </div>
+        <!-- Movie Seats -->
+
+        <div class="row">
+          <div class="seat" id="18" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="19" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="20" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="21" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+
+          <div class="seat" id="22" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+          <div class="seat" id="23" onClick="onSeat(this)">
+            <p>Sold</p>
+
+            <span>Booked</span>
+          </div>
+        </div>
+
+        <div class="details">
+          <!-- <h1>Price: 0</h1> -->
+          <div id="cancel-booking" onclick="can()">Cancel Booking 
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+
+  <script src="./js/seat.js"></script>
+  <script src="./js/movie6.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</html>

@@ -1,0 +1,40 @@
+.banners {
+    width: 100%;
+    height: 600px;
+    border: 1px solid red;
+    /* bottom: 15%; */
+}
+img {
+    height: inherit;
+    width: 100%;
+    transition: all 0.9s ease;
+    /* transition: all 3s ease-in-out;
+    animation:backwards;
+    animation-duration: infinite;
+    animation-delay: 10s;
+    animation-name: carosel;
+    animation-direction: alternate-reverse; */
+}
+
+/* @keyframes carosel {
+    0%{
+        right:100%
+    }
+    25%{
+        right:100%
+
+    }
+    50%{
+        right:100%
+
+    }
+    75%{
+        right:100%
+
+    }
+    100%{
+        right:100%
+
+    }
+    
+} */
